@@ -11,19 +11,34 @@ Warning Experimental Repository
     well fine, but *don't hold your breath*.
 
 It already does just that BUT *crudely*.
-(You need to understand your window manager.)
+
 Right click resize, should , enable you at least to
 drag the main window around. 
 
-At least you can assess this excellent app.
-Which has an interface design aimed at more modern screen resolutions :)
+*At least you can assess this excellent stable app.*
+Which has an interface design aimed at more modern screen resolutions.
+(Then go and use the real one )
 
-    Hint: configure preferences for two windows.
+    Hint: -
+    - I can use it like this so maybe you can :)
+    - configure preferences for two windows.
+    - set up defaults with few video and SFX tracks.
+    
     Hint: you can run this from unpacked sources without installing.
-    Hint: [Dependencies](./flowblade-trunk/docs/DEPENDENCIES.md)
+    [Dependencies](./flowblade-trunk/docs/DEPENDENCIES.md)
 
-You probably really really want:
+Here are the devuan / debian  dependencies...
 
+    Depends: python-cairo, python-gobject-2, python-gtk2, python-gnome2,
+    python-numpy, python-mlt | python-mlt5 | python-mlt2,
+    gtk2-engines-pixbuf, librsvg2-common,
+    frei0r-plugins, swh-plugins,
+    python:any (>= 2.6.6-7~)
+    Description: non-linear video editor
+
+You probably really *really* want the upstream version for production uses:
+
+-----------------------------------------------------------------------
 [The Original Flowblade ](https://github.com/jliljebl/flowblade)
 
 
@@ -35,90 +50,3 @@ You probably really really want:
   1. [Docs](https://github.com/jliljebl/flowblade#docs)
   1. [Screenshot](https://github.com/jliljebl/flowblade#screenshot)
   1. [Forum, Webpage and Contact](https://github.com/jliljebl/flowblade#forum-webpage-and-contact)
-
-# Introduction
-
-Flowblade is a **multitrack non-linear video editor** for Linux released under **GPL 3 license**.
-
-Flowblade is designed to provide a fast, precise and robust editing experience. Flowblade employs a film-style insert editing model as workflow. In insert editing clips are generally placed tightly after other clips when they are inserted on the timeline. Edits are fine tuned by trimming in and out points of clips or by cutting and deleting parts of clips.
-
-Flowblade provides powerful tools to mix and filter video and audio.
-
-# Features
-
-**Editing:**
-
-  * 4 move tools
-  * 3 trim tools
-  * 4 methods to insert / overwrite / append clips on the timeline
-  * Drag'n'Drop clips on the timeline
-  * Clip and compositor parenting with other clips
-  * Max. 9 combined video and audio tracks available
-
-**Image compositing:**
-
-  * 6 compositors. Mix, zoom, move and rotate source video with keyframed animation tools
-  * 19 blends. Stardand image blend modes like Add, Hardlight and Overlay are available
-  * 40+ pattern wipes. 
-
-**Image and audio filtering:**
-
-  * 50+ image filters: color correction, image effects, distorts, alpha manipulation, blur, edge detection, motion effects, freeze frame, etc.
-  * 30+ audio filters: keyframed volume mixing, echo, reverb, distort, etc.
-
-**Supported editable media types:**
-
-  * Most common video and audio formats, depends on installed MLT/FFMPEG codecs
-  * JPEG, PNG, TGA, TIFF graphics file types
-  * SVG vector graphics
-  * Numbered frame sequences 
-
-**Output encoding:**
-
-  * Most common video and audio formats, depends on installed MLT/FFMPEG codecs
-  * User can define rendering by setting FFMpeg args individually
-        
-# Releases
-
-**Latest release:** Flowblade Movie Editor 1.12 was released on March 2017.
-
-**Next release:** Flowblade Movie Editor 1.14 will be out on August 2017.
-
-# Installing Flowblade
-
-Installing instructions are available [here](./flowblade-trunk/docs/INSTALLING.md).
-
-# Docs
-
-[FAQ](./flowblade-trunk/docs/FAQ.md)
-
-[Known Issues](./flowblade-trunk/docs/KNOWN_ISSUES.md)
-
-[Roadmap](./flowblade-trunk/docs/ROADMAP.md)
-
-[Release notes](./flowblade-trunk/docs/RELEASE_NOTES.md)
-
-[Creating a translation](./flowblade-trunk/docs/CREATING_TRANSLATION.md)
-
-[Dependencies](./flowblade-trunk/docs/DEPENDENCIES.md)
-
-
-
-# Screenshot
-
-[Screenshot 1.4 dark theme](./flowblade-trunk/docs/Screenshot-1-4-dark.png)
-
-[Screenshot 0.18 light theme](./flowblade-trunk/docs/Screenshot-0-18.png)
-
-These are in the repository */docs* folder.
-
-
-# Forum, Webpage and Contact
-
-[The project webpage is here](http://jliljebl.github.io/flowblade/). 
-
-For questions and discussion on Flowblade we have a [Google+ group](https://plus.google.com/u/0/communities/103860400113389238474) available. There will be some updates on what is happening with the project too.
-
-Use the **Issues** tab to give bug reports or to make feature requests.
-
-If needed, contact the project lead for additional information: janne.liljeblad@gmail.com

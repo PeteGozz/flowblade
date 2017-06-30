@@ -19,6 +19,21 @@
 | gir1.2-pango-1.0 | Pango text lib | pango |
 | gir1.2-gdkpixbuf-2.0 | Image support | gdk-pixbuf2 |
 
+Latest state for a deb distro install:
+
+Debian Devuan
+--------------
+
+    apt-cache show flowblade  or
+    apt-cache depends flowblade
+
+    python-cairo, python-gobject-2, python-gtk2, python-gnome2,
+    python-numpy, python-mlt | python-mlt5 | python-mlt2,
+    gtk2-engines-pixbuf, librsvg2-common,
+    frei0r-plugins, swh-plugins,
+    python:any (>= 2.6.6-7~)
+    
+
 # Dropped  Dependencies #
 
 | **Debian/Ubuntu package name** | **Introduced** | **Dropped** |

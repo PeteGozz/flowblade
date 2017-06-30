@@ -1,5 +1,5 @@
 
-** Not Really Flowblade **
+** Not Really [Flowblade](https://github.com/jliljebl/flowblade) **
 
 -------------------------------
 Warning Experimental Repository
@@ -18,14 +18,14 @@ drag the main window around.
 At least you can assess this excellent app.
 Which has an interface design aimed at more modern screen resolutions :)
 
-Hint: configure preferences for two windows.
-
+    Hint: configure preferences for two windows.
+    Hint: you can run this from unpacked sources without installing.
+    Hint: [Dependencies](./flowblade-trunk/docs/DEPENDENCIES.md)
 
 You probably really really want:
 
-[The Original](https://github.com/jliljebl/flowblade)
+[The Original Flowblade ](https://github.com/jliljebl/flowblade)
 
-**"Installing" instructions are available [here](./flowblade-trunk/docs/INSTALLING.md).**
 
 **Contents:**
   1. [Introduction](https://github.com/jliljebl/flowblade#introduction)

@@ -2,7 +2,7 @@
 Name=Flowblade Movie Editor
 GenericName=Movie Editor
 X-GNOME-FullName=Flowblade Movie Editor
-Comment=Edit media to create movies
+Comment=Create Movies from media files
 Exec=flowblade %f
 Terminal=false
 Type=Application
@@ -11,3 +11,5 @@ Categories=GNOME;GTK;AudioVideo;AudioVideoEditing;
 MimeType=application/vnd.flowblade-project;
 X-Ubuntu-Gettext-Domain=Flowblade
 Name[en_US]=flowblade
+Name[en_AU]=flowblade
+Name[en_NZ]=flowblade

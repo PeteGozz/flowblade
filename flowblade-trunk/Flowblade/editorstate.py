@@ -187,7 +187,10 @@ def set_copy_paste_objects(objs):
 def get_copy_paste_objects():
     return _copy_paste_objects
 
+# screen sizes are assessed here
+
 def screen_size_small_height():
+    ''' Screen Height < 901 or W < 1280 => T '''
     if SCREEN_HEIGHT < 901:
         return True
     else:
@@ -196,17 +199,33 @@ def screen_size_small_height():
             
         return False
 
+
 def screen_size_small_width():
+    ''' Any screen width < 1368 is considered small => True '''
     if SCREEN_WIDTH < 1368:
         return True
     else:
         return False
 
 def screen_size_small():
+    ''' collates size assessments and returns a boolean '''
     if screen_size_small_height() == True or screen_size_small_width() == True:
         return True
     
     return False
+
+def screen_at_minimum():
+    ''' if we exactly match some useful minimum screen dimension '''
+    if SCREEN_HEIGHT == 1024 and SCREEN_WIDTH >= 760:
+        return True
+    elif SCREEN_WIDTH >= 760:
+        return True
+    else:
+        return False
+    
+    
+
+# end size bools here
 
 def get_cached_trim_clip(path):
     try:

@@ -21,8 +21,8 @@
 """
 Application module.
 
-Handles application initialization, shutdown, opening projects, autosave and changing
-sequences.
+Handles application initialization, shutdown, opening projects, 
+autosave and changing sequences.
 """
 try:
     import pgi
@@ -36,6 +36,7 @@ from gi.repository import GObject
 from gi.repository import GLib
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+gi.require_version('Gdk', '3.0')
 from gi.repository import Gdk
 
 import locale
@@ -117,6 +118,11 @@ _log_file = None
 
 assoc_file_path = None
 assoc_timeout_id = None
+# hardware screen size
+# to compare with Gdk.Screen.width() and .height()
+# and possibly set globally for a minimal GUI 
+min_screen_w = 1024
+min_screen_h = 760
 
 def main(root_path):
     """
@@ -215,7 +221,7 @@ def main(root_path):
     # Load drag'n'drop images
     dnd.init()
 
-    # Adjust gui parameters for smaller screens
+    # Detect screen size Adjust gui parameters for smaller screens
     scr_w = Gdk.Screen.width()
     scr_h = Gdk.Screen.height()
     editorstate.SCREEN_WIDTH = scr_w
@@ -226,9 +232,11 @@ def main(root_path):
     print "Small width:",  editorstate.screen_size_small_width()
 
     _set_draw_params()
-
-    # Refuse to run on too small screen.
-    if scr_w < 1151 or scr_h < 767:
+    ''' 
+    Refuse to run if screen is smaller than the settings found here.
+    min_screen_w = 1024  min_screen_h = 760
+    '''
+    if scr_w < min_screen_w or scr_h < min_screen_h:
         _too_small_screen_exit()
         return
 
@@ -405,6 +413,7 @@ def create_gui():
     updater.load_icons()
 
     # Notebook indexes are differn for 1 and 2 window layouts
+    # this sets for 2 window layouts ?
     if editorpersistance.prefs.global_layout != appconsts.SINGLE_WINDOW:
         medialog.range_log_notebook_index = 0
         compositeeditor.compositor_notebook_index = 2
@@ -759,7 +768,7 @@ def _set_draw_params():
     if editorstate.SCREEN_WIDTH < 1153 and editorstate.SCREEN_HEIGHT < 865:
         editorwindow.MONITOR_AREA_WIDTH = 400
         positionbar.BAR_WIDTH = 100
-
+        
 def _too_small_screen_exit():
     global exit_timeout_id
     exit_timeout_id = GObject.timeout_add(200, _show_too_small_info)
@@ -768,11 +777,15 @@ def _too_small_screen_exit():
 
 def _show_too_small_info():
     GObject.source_remove(exit_timeout_id)
-    primary_txt = _("Too small screen for this application.")
     scr_w = Gdk.Screen.width()
     scr_h = Gdk.Screen.height()
-    secondary_txt = _("Minimum screen dimensions for this application are 1152 x 768.\n") + \
-                    _("Your screen dimensions are ") + str(scr_w) + " x " + str(scr_h) + "."
+    primary_txt = _("Flowblade Exiting :\n\
+    This screen is too small for optimal use.")
+    secondary_txt = _("Minimum screen dimensions for Flowblade are : ")\
+                +  str(min_screen_w) + " X " + str(min_screen_h) + _(".\n") + \
+                _("Your current screen dimensions are : ") +\
+                str(scr_w) + " x " + str(scr_h) + "."
+    
     dialogutils.warning_message_with_callback(primary_txt, secondary_txt, None, False, _early_exit)
 
 def _early_exit(dialog, response):

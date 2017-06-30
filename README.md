@@ -1,9 +1,12 @@
 
+
 ![Flowblade](flowblade-trunk/Flowblade/res/img/header_text.png "Flowblade")
 
-**NEW RELEASE 1.12 is out. Relesase notes [here](./flowblade-trunk/docs/RELEASE_NOTES.md).**
+This fork is really a study of GObject and Python.
+If I happen to make it work more readily on smaller screens (say 1024 X 760 )
+well fine.
 
-**Installing instructions are available [here](./flowblade-trunk/docs/INSTALLING.md).**
+**"Installing" instructions are available [here](./flowblade-trunk/docs/INSTALLING.md).**
 
 **Contents:**
   1. [Introduction](https://github.com/jliljebl/flowblade#introduction)

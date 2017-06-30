@@ -2,9 +2,26 @@
 
 ![Flowblade](flowblade-trunk/Flowblade/res/img/header_text.png "Flowblade")
 
-This fork is really a study of GObject and Python.
-If I happen to make it work more readily on smaller screens (say 1024 X 760 )
-well fine.
+-------------------------------
+Warning Experimental Repository
+-------------------------------
+
+This *fork* is really a *study* of GObject and Python.
+If I happen to make it work more readily on smaller screens
+(say 1024 X 760 ) well fine, but *don't hold your breath*.
+
+It already does just that BUT *crudely*.
+You need to understand your window manager.
+Right click resize, should , enable you at least to
+drag the main window around. 
+
+My thought is that at least you can assess this excellent app.
+Which has an interface design aimed at more modern screen resolutions :)
+
+
+You probably really really want:
+
+[Stability](https://github.com/jliljebl/flowblade)
 
 **"Installing" instructions are available [here](./flowblade-trunk/docs/INSTALLING.md).**
 

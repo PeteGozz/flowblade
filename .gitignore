@@ -1,5 +1,7 @@
 # Flowblade .gitignore
-
+*.~
+*.hold
+*.original
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -7,7 +9,7 @@ mlt.py
 
 # C extensions
 *.so
-
+*.a
 *.po~
 *.py~
 *.pot~
